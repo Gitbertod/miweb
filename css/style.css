@@ -23,6 +23,9 @@ body {
 }
 
 /*Encabezado*/
+a{
+    text-decoration: none;
+}
 header {
     width: 100%;
     height: 100px;
@@ -32,10 +35,12 @@ header {
     height: 80px;
     width: 500px;
 }
-#logoTexto{
+
+#logoTexto {
     display: flex;
     flex-direction: column;
 }
+
 #symbol {
     float: left;
     display: block;
@@ -51,7 +56,7 @@ h1 {
 
 }
 
-h2 {
+.tagline {
     font-family: "Comforta";
     letter-spacing: 3px;
     font-size: 15px;
@@ -134,6 +139,7 @@ header {
     margin-bottom: 40px;
 }
 
+
 #mifoto {
     height: 300px;
     border-radius: 400px;
@@ -159,6 +165,7 @@ header {
     height: 25px;
     font-size: 25px;
 }
+
 
 .type-device {
     color: var(--type-device-color);
@@ -189,7 +196,7 @@ header {
 .android-btn div p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
-    margin-top:0px;
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 
@@ -212,16 +219,12 @@ header {
     box-shadow: 0px 0px 6px 2px gray;
 }
 
-.games img:hover {
-    transition: all 300ms;
-
-}
-
 footer {
     width: 100%;
     height: 150px;
     background: #b5482a;
-    margin-top: 40px;
+    margin-top: 120px;
+    
 }
 
 .footer {
@@ -264,10 +267,17 @@ footer {
     display: block;
 }
 
+.linkButton{
+    width: 100px;
+    display: block;
+}
 /*----------ACERCA DE MI*-----------*/
 #saludoDescripcion {
-    display: flex;
     margin-left: 20px;
+}
+#saludoDescripcion p{
+    width:500px;
+    line-height: 30px;
 }
 
 #midescripcion {
@@ -275,15 +285,24 @@ footer {
     font-size: 26px;
     color: #606060;
     margin-top: 30px;
+    margin-right: 40px;
     text-align: center;
+    width: 70%;
 }
 
+
+.containerFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #tecnologias {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     height: 100px;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 
 }
 
@@ -305,35 +324,36 @@ footer {
 .containerFlex {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
+    margin: 0px;
+    margin-top: 80px;
 }
 
 #contacto {
-    width: 50%;
+    width: 400px;
     height: 400px;
     background: #b5482a;
 
 }
 
-#inicioContactos {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 40px;
-    margin-top: 40px;
-}
+
 
 #datos {
     display: flex;
     flex-wrap: wrap;
     color: #b5482a;
-    margin-left: 10px;
-    flex-direction: row;
-
+    margin-left: 40px;
+    flex-direction: column;
+    flex-basis: 500px;
 }
 
+
+.dataContacts{
+    display: flex;
+}
 #redes {
     margin-top: 40px;
-    margin-left: 10px;
     display: flex;
     flex-wrap: wrap;
     -ms-flex-align: center;
@@ -388,29 +408,21 @@ footer {
 
 }
 
-@media (max-width:935px) {
-    #contacto {
-        width: 100%;
-    }
 
-    .containerFlex {
-        flex-direction: row;
-    }
-
-    #inforedes {}
-}
 
 /*------------------ PORTAFOLIO------------------*/
 .wrap #titulo {
     display: flex;
+    justify-content: center;
     margin: 20px;
     margin-top: 40px;
 
 }
 
-#titulo h2 {
+#titulo>h2 {
     font-size: 25px;
     text-align: center;
+    color: var(--title-color);
 }
 
 /*RESPONSIVE*/
@@ -421,8 +433,8 @@ footer {
     }
 
     .wrap #miSaludo {
-        font-size: 55px;
-        width: 580px;
+        font-size: 50px;
+        width: 555px;
     }
 
     #saludo {
@@ -437,32 +449,34 @@ footer {
         margin-top: 40px;
     }
 
-    .games img {
-        width: 250px;
-        height: 250px;
-    }
-
-    .gameDescription{
-        height: 210px;
-    }
-    .gameDescription p{
+    .gameDescription>p {
         margin-bottom: 20px;
         margin-top: 20px;
+        width: 100%;
     }
 }
 
 
 
 @media(max-width:1057px) {
-    #saludo {
-        width: 400px;
+
+
+
+
+    .android-btn div p {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 90px;
+        color: white;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
+
 }
 
 @media(max-width:1032px) {
     header {
-        width: auto;
-        height: 200px;
+        width: 100%;
+        height: 100px;
     }
 
     #menu {
@@ -489,7 +503,7 @@ footer {
 
     .wrap #miSaludo {
         font-size: 45px;
-        width: 570px;
+        
         margin-top: 48px;
     }
 
@@ -499,79 +513,35 @@ footer {
 
 }
 
-@media(max-width:926px) {
-    #container {
+@media (max-width:935px) {
+    #contacto {
         width: 100%;
     }
 
-    header {
-        width: auto;
-        height: 200px;
+    .containerFlex {
+        flex-direction: row;
     }
 
-    #mifoto {
-        float: none;
-        margin: 0px auto;
-    }
-
-    #menu {
-        margin: 0px auto;
-    }
-
-    menu ul {
-        justify-content: center;
-    }
-
-    #menu ul li {
-        justify-content: center;
-    }
-
-    #menu ul li a {
-        font-size: 16px;
-
-    }
-
-
-    #saludo {
-        width: 100%;
-
-    }
-
-    #saludo #miSaludo {
-        width: 100%;
-        font-size: 65px;
-        float: none;
-        margin: 0px auto;
-        text-align: center;
-    }
-
-    #gameGroups {
-        margin: 0px auto;
-        width: 100%;
-    }
-
-    .games {
-        float: none;
-        margin: 0px auto;
-        height: 400px;
-        width: 400px;
-        margin-top: 40px;
-    }
-
-    .games img {
-        float: none;
-        margin: 0px auto;
-        height: 400px;
-        width: 400px;
+    .gameDescription>p {
+        font-size: 13px;
+        margin-right: 10px;
     }
 }
 
-@media(max-width:740px) {
+@media(max-width:841px) {
+    header {
+        height: 200px;
+    }
+
+    .header {
+        flex-direction: column;
+
+    }
+
     #menu {
         margin: 0px auto;
         flex-grow: 1;
         justify-content: center;
-
     }
 
     #menu ul {
@@ -585,9 +555,6 @@ footer {
         flex-grow: 1;
         justify-content: center;
         text-align: center;
-
-
-
     }
 
     #menu ul li a {
@@ -599,7 +566,6 @@ footer {
     }
 
     #logotipo {
-        margin-top: 20px;
         width: 350px;
         height: 110px;
     }
@@ -614,9 +580,51 @@ footer {
 
     #logotipo h2 {
         font-size: 10px;
-        margin-right: 25px;
         letter-spacing: 3px;
+        margin-right: 20px;
+        margin-left: 65px;
     }
+
+    #container {
+        flex-direction: column;
+    }
+
+    #mifoto {
+        margin-right: 0px;
+    }
+
+    .wrap #miSaludo {
+        text-align: center;
+        margin-left: 0px;
+    }
+}
+
+@media (max-width:718px) {
+
+    .games {
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 750px;
+    }
+    
+    .photoDivGame a img {
+        height: 400px;
+        width: 400px;
+    }
+
+    .gameDescription {
+        margin-top: -3px;
+        box-shadow: 0px 0px 6px 2px gray;
+        width: 360px;
+    }
+
+    .containerFlex{ /*pagina acerca de mi*/
+        flex-direction: column;
+    }
+#datos{
+    margin-top: 80px;
+}
+
 }
 
 @media(max-width:530px) {
@@ -641,8 +649,9 @@ footer {
 
     #logotipo h2 {
         font-size: 10px;
-        margin-right: 25px;
         letter-spacing: 3px;
+        margin-right: 20px;
+        margin-left: 65px;
     }
 
     #menu {
@@ -674,11 +683,13 @@ footer {
 
     #saludo #miSaludo {
         margin-top: 20px;
-        font-size: 45px;
+        margin-right: 20px;
+        font-size: 40px;
+        line-height: 50px;
+        width: 500px;
+        margin: 0px auto ;
+        margin-top:40px ;
     }
-
-
-
 
 }
 
@@ -687,23 +698,29 @@ footer {
 
     #saludo #miSaludo {
         margin-top: 20px;
-        font-size: 40px;
+        font-size: 30px;
+        width: 400px;
+        margin: 0px auto ;
+        margin-top:40px ;
     }
 
     .games {
-        width: 340px;
-        height: 340px;
+        justify-content: center;
+        height: 300px;
     }
 
-    .games img {
-        width: 340px;
-        height: 340px;
+    .photoDivGame a img {
+        width: 300px;
+        height: 300px;
     }
 
-    #menu {
-        margin: 0px auto;
-
+    .gameDescription{
+        width: 260px;
     }
 
+    #timmy-device{
+        margin-top: 40px;
+    }
 
 }
+
