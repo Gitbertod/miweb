@@ -21,7 +21,6 @@
 body {
     background: url(../img/paven.png);
     max-width: 100%;
-    overflow-x: hidden;
 }
 
 /*Encabezado*/
@@ -137,8 +136,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin: 40px;
 }
 
 
@@ -256,7 +254,7 @@ footer {
 
 #developer {
     margin: auto;
-    width: 380px;
+    width: 100%;
     display: block;
 }
 
@@ -436,13 +434,11 @@ footer {
 
     .wrap #miSaludo {
         font-size: 50px;
-        width: 555px;
+        width:100%;
     }
 
     #saludo {
-        display: block;
-        float: left;
-        width: 500px;
+        display:flex;
     }
 
     #gameGroups {
@@ -545,6 +541,7 @@ footer {
         display: inline-flex;
         margin-right: 5px auto;
         justify-content: center;
+        width: 100%;
 
     }
 
@@ -552,6 +549,10 @@ footer {
         flex-grow: 1;
         justify-content: center;
         text-align: center;
+    }
+
+    #menu ul li:last-child{
+        padding-right: 0px;
     }
 
     #menu ul li a {
@@ -618,21 +619,28 @@ footer {
     .containerFlex{ /*pagina acerca de mi*/
         flex-direction: column;
     }
-#datos{
-    margin-top: 80px;
-}
+    #datos{
+        margin-top: 80px;
+    }   
+
+    #menu ul {
+        margin: 0px;
+    }
 
 }
 
 @media(max-width:530px) {
     header {
-        width: auto;
         height: 200px;
+        justify-content: center;
     }
 
     #logotipo {
-        margin-top: 20px;
-        width: 350px;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+        width: 340px;
+        margin: 0px auto;
         height: 110px;
     }
 
@@ -652,15 +660,14 @@ footer {
     }
 
     #menu {
-
+        height: auto;
         margin: 0px auto;
         width: auto;
 
     }
 
     #menu ul {
-        margin: 0px auto;
-        margin-right: 0px;
+        margin: 0px;
     }
 
     #menu ul li {
@@ -669,7 +676,11 @@ footer {
         margin: 0px auto;
     }
 
+    #menu ul:last-child{
+        padding-right: 0px;
+        margin-right: 0px;
 
+    }   
     #menu ul li a {
         display: inline-flex;
         justify-content: center;
@@ -683,7 +694,6 @@ footer {
         margin-right: 20px;
         font-size: 40px;
         line-height: 50px;
-        width: 500px;
         margin: 0px auto ;
         margin-top:40px ;
     }
@@ -696,8 +706,8 @@ footer {
     #saludo #miSaludo {
         margin-top: 20px;
         font-size: 30px;
-        width: 400px;
-        margin: 0px auto ;
+        margin-right: 10px;
+        margin-left: 10px;
         margin-top:40px ;
     }
 
@@ -720,4 +730,12 @@ footer {
     }
 
 }
+@media (max-width: 375px){
+
+    header{
+        width: 375px;
+    }
+}
+
+
 
