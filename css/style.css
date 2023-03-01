@@ -279,7 +279,9 @@ footer {
 }
 /*----------ACERCA DE MI*-----------*/
 #saludoDescripcion {
+    margin-top: 40px;
     margin-left: 20px;
+    margin-right: 20px;
 }
 #saludoDescripcion p{
     width:100%;
